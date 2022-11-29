@@ -18,11 +18,11 @@ const resizeChart = () => {
   chart?.resize()
 }
 
-const resize = debounce(resizeChart, 300)
+const _resize = debounce(resizeChart, 300)
 
 const disposeChart = () => {
   if (chartDom.value)
-    removeListener(chartDom.value, resize)
+    removeListener(chartDom.value, _resize)
 
   chart?.dispose()
   chart = null
@@ -34,7 +34,7 @@ const initChart = () => {
     // init echarts
     chart = echarts.init(chartDom.value, isDark.value ? 'dark-chart' : undefined)
     chart.setOption(props.option)
-    addListener(chartDom.value, resize)
+    addListener(chartDom.value, _resize)
   }
 }
 

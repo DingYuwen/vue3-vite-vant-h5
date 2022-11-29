@@ -4,7 +4,7 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
 // 导入路由组件
-import mian from '@/views/index.vue'
+import main from '@/views/index.vue'
 import charts from '@/views/charts/index.vue'
 NProgress.configure({ showSpinner: true })
 
@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/',
     name: 'main',
-    component: mian,
+    component: main,
   },
   {
     path: '/charts',

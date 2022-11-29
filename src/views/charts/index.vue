@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// import { Chart } from '@/components'
-
 const barOption = {
   title: {},
   tooltip: {},
@@ -63,39 +61,20 @@ const refScoreOption = ref(scoreOption)
 </script>
 
 <template>
-  <!-- <van-nav-bar title="📊 charts" left-arrow fixed @click-left="onClickLeft" /> -->
-
-  <div class="container p-t-12 relative">
-    <div class="chart">
-      <Chart :option="refBarOption" :style="{ height: '330px' }" />
+  <div class="p-t-12">
+    <div class="chart-bg b-rd m-4">
+      <Chart :option="refBarOption" h-300px />
     </div>
 
-    <div class="chart item">
-      <Chart :option="refLineOption" :style="{ height: '330px' }" />
+    <div class="chart-bg b-rd m-4">
+      <Chart :option="refLineOption" h-300px />
     </div>
 
-    <div class="chart item">
-      <Chart :option="refScoreOption" :style="{ height: '330px' }" />
+    <div class="chart-bg b-rd m-4">
+      <Chart :option="refScoreOption" h-300px />
     </div>
   </div>
 </template>
 
-<style lang="less" scoped>
-.chart {
-  width: 100%;
-  height: 300px;
-  background: #fff;
-}
-
-.chart.item {
-  margin-top: 15px;
-}
-
-[data-theme='dark'] {
-  .chart {
-    color: #fff;
-    background: #222;
-  }
-}
-</style>
+<style lang="less" scoped></style>
 

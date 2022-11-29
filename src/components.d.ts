@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Chart: typeof import('./components/chart/index.vue')['default']
+    CountTo: typeof import('./components/common/CountTo.vue')['default']
     DarkModeSwitch: typeof import('./components/common/DarkModeSwitch.vue')['default']
     IconMdiBellOutline: typeof import('~icons/mdi/bell-outline')['default']
     IconMdiFilterVariant: typeof import('~icons/mdi/filter-variant')['default']

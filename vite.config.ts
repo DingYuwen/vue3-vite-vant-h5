@@ -1,8 +1,8 @@
 /*
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-11-29 18:44:16
- * @LastEditors: dingyuwen
+ * @LastEditTime: 2022-11-29 23:59:36
+ * @LastEditors: dingyuwen ding_yuwen@163.com
  * @Description:
  */
 import path, { resolve } from 'path'
@@ -143,8 +143,15 @@ const getEnvPlugins = (command, env): (PluginOption | PluginOption[])[] => {
         'fixed-center': 'fixed-lt flex-center wh-full',
         'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
         'ellipsis-text': 'nowrap-hidden overflow-ellipsis',
-        'transition-base': 'transition-all duration-300 ease-in-out'
+        'transition-base': 'transition-all duration-300 ease-in-out',
+        'icon-btn': 'text-18 inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-primary !outline-none',
+        'chart-bg': 'bg-white dark:bg-dark-400',
+        // 'm-p': 'm="[var(--van-cell-group-inset-padding)]"',
       },
+      rules: [
+        [/^bc-(.+)$/, ([, color]) => ({ 'border-color': `#${color}` })],
+        ['card-shadow', { 'box-shadow': '0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017' }],
+      ],
       transformers: [transformerDirectives(), transformerVariantGroup()],
     }),
 
