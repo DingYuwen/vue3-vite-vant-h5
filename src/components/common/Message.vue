@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-29 17:29:03
- * @LastEditTime: 2022-11-29 17:39:40
+ * @LastEditTime: 2022-11-30 09:25:29
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <div class="text-18px inline-flex">
+  <div class="text-5 inline-flex">
     <icon-mdi-bell-outline />
   </div>
 </template>

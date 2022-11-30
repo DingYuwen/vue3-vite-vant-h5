@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-29 16:45:20
- * @LastEditTime: 2022-11-29 18:41:36
+ * @LastEditTime: 2022-11-30 10:59:49
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -10,9 +10,12 @@ defineOptions({ name: 'Header' })
 </script>
 
 <template>
-  <header class="w-screen h-12 p-2 flex-y-center justify-between fixed z-36">
-    <div inline-flex>
-      <organization-filter />
+  <header class="w-screen h-12 lg:h-15 p-4 lg:p-5 flex-y-center justify-between fixed z-36">
+    <div class="inline-flex">
+      <organization-filter lg:hidden />
+    </div>
+    <div class="hidden lg:inline-flex">
+      <organization-select />
     </div>
     <div inline-flex>
       <dark-mode-switch />

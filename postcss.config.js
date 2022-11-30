@@ -1,3 +1,10 @@
+/*
+ * @Author: dingyuwen ding_yuwen@163.com
+ * @Date: 2022-11-29 19:03:53
+ * @LastEditTime: 2022-11-30 10:28:22
+ * @LastEditors: dingyuwen
+ * @Description:
+ */
 module.exports = {
   plugins: {
     'autoprefixer': {},
@@ -5,7 +12,7 @@ module.exports = {
       unitToConvert: 'px', // 需要转换的单位，默认为"px"
       viewportWidth: 375, // 设计稿的视口宽度
       unitPrecision: 5, // 单位转换后保留的精度
-      propList: ['*', '!font-size'], // 能转化为vw的属性列表,!font-size表示font-size后面的单位不会被转换
+      propList: ['*', '!font-size', '!height'], // 能转化为vw的属性列表,!font-size表示font-size后面的单位不会被转换
       viewportUnit: 'vw', // 希望使用的视口单位
       fontViewportUnit: 'vw', // 字体使用的视口单位
       // 需要忽略的CSS选择器，不会转为视口单位，使用原有的px等单位。

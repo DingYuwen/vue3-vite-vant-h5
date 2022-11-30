@@ -19,6 +19,7 @@
     "dayjs": "^1.11.4",
     "echarts": "^5.4.0",
     "lodash-es": "^4.17.21",
+    "naive-ui": "^2.34.2",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
     "pinia-plugin-persistedstate": "^2.2.0",

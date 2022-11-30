@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-29 17:44:33
- * @LastEditTime: 2022-11-29 17:55:39
+ * @LastEditTime: 2022-11-30 09:41:37
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <div class="text-18px inline-flex">
+  <div class="text-4 lg:text-5 inline-flex">
     <icon-mdi-filter-variant />
   </div>
 </template>

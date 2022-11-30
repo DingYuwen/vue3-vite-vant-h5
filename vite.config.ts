@@ -1,8 +1,8 @@
 /*
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-11-29 23:59:36
- * @LastEditors: dingyuwen ding_yuwen@163.com
+ * @LastEditTime: 2022-11-30 10:05:12
+ * @LastEditors: dingyuwen
  * @Description:
  */
 import path, { resolve } from 'path'
@@ -13,7 +13,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite' // vue3等插件 hooks 自动引入
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-import { VantResolver } from 'unplugin-vue-components/resolvers'
+import { NaiveUiResolver, VantResolver } from 'unplugin-vue-components/resolvers'
 import DefineOptions from 'unplugin-vue-define-options/vite'
 import UnoCSS from 'unocss/vite'
 import { presetAttributify, presetIcons, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
@@ -43,6 +43,7 @@ const getEnvPlugins = (command, env): (PluginOption | PluginOption[])[] => {
     Components({
       dts: resolve(pathSrc, 'components.d.ts'),
       resolvers: [
+        NaiveUiResolver(),
         // vant组件
         VantResolver(),
         // 自动注册图标组件
