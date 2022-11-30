@@ -25,6 +25,8 @@ declare module '@vue/runtime-core' {
     OrganizationSelect: typeof import('./components/common/OrganizationCascader.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Tab: typeof import('./components/common/Tab.vue')['default']
+    VanButton: typeof import('vant/es')['Button']
     VanCascader: typeof import('vant/es')['Cascader']
     VanCell: typeof import('vant/es')['Cell']
     VanCellGroup: typeof import('vant/es')['CellGroup']
@@ -32,5 +34,7 @@ declare module '@vue/runtime-core' {
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanPopup: typeof import('vant/es')['Popup']
     VanRow: typeof import('vant/es')['Row']
+    VanTab: typeof import('vant/es')['Tab']
+    VanTabs: typeof import('vant/es')['Tabs']
   }
 }

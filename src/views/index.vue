@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-11-30 10:29:54
+ * @LastEditTime: 2022-11-30 14:49:16
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -154,69 +154,65 @@ const { domRef: pieRef } = useEcharts(pieOptions)
 </script>
 
 <template>
-  <div class="w-screen p-t-12 relative">
-    <van-cell-group title="Template for Vue3 Vant Mobile" inset>
+  <div m-t-4>
+    <!-- <van-cell-group title="Template for Vue3 Vant Mobile" inset>
       <van-cell title="📊 charts 演示" to="charts" is-link />
-    </van-cell-group>
+    </van-cell-group> -->
 
-    <div m-4>
-      <n-grid cols="2 l:4" :x-gap="12" :y-gap="12" responsive="screen">
-        <n-grid-item>
-          <div chart-bg b-rd p-2>
-            <p class="text-[#aaa]">
-              Overview
-            </p>
-            <h3 class="pt-6 text-6 lg:text-8 font-bold text-right">
-              <count-to prefix="$" :start-value="0" :end-value="7754" />
-            </h3>
-          </div>
-        </n-grid-item>
-        <n-grid-item>
-          <div chart-bg b-rd p-2>
-            <p class="text-[#aaa]">
-              Overview
-            </p>
-            <h3 class="pt-6 text-6 lg:text-8 font-bold text-right">
-              <count-to prefix="$" :start-value="0" :end-value="7754" />
-            </h3>
-          </div>
-        </n-grid-item>
-        <n-grid-item>
-          <div chart-bg b-rd p-2>
-            <p class="text-[#aaa]">
-              Earnings
-            </p>
-            <h3 class="pt-6 text-6 lg:text-8 font-bold text-right">
-              <count-to prefix="$" :start-value="0" :end-value="1234" />
-            </h3>
-          </div>
-        </n-grid-item>
-        <n-grid-item>
-          <div chart-bg b-rd p-2>
-            <p class="text-[#aaa]">
-              Earnings
-            </p>
-            <h3 class="pt-6 text-6 lg:text-8 font-bold text-right">
-              <count-to prefix="$" :start-value="0" :end-value="1234" />
-            </h3>
-          </div>
-        </n-grid-item>
-      </n-grid>
-    </div>
+    <n-grid m-y-4 cols="2 l:4" :x-gap="12" :y-gap="12" responsive="screen">
+      <n-grid-item>
+        <div chart-bg b-rd p-2>
+          <p class="text-[#aaa]">
+            Overview
+          </p>
+          <h3 class="pt-6 text-6 lg:text-8 font-bold text-right">
+            <count-to prefix="$" :start-value="0" :end-value="7754" />
+          </h3>
+        </div>
+      </n-grid-item>
+      <n-grid-item>
+        <div chart-bg b-rd p-2>
+          <p class="text-[#aaa]">
+            Overview
+          </p>
+          <h3 class="pt-6 text-6 lg:text-8 font-bold text-right">
+            <count-to prefix="$" :start-value="0" :end-value="7754" />
+          </h3>
+        </div>
+      </n-grid-item>
+      <n-grid-item>
+        <div chart-bg b-rd p-2>
+          <p class="text-[#aaa]">
+            Earnings
+          </p>
+          <h3 class="pt-6 text-6 lg:text-8 font-bold text-right">
+            <count-to prefix="$" :start-value="0" :end-value="1234" />
+          </h3>
+        </div>
+      </n-grid-item>
+      <n-grid-item>
+        <div chart-bg b-rd p-2>
+          <p class="text-[#aaa]">
+            Earnings
+          </p>
+          <h3 class="pt-6 text-6 lg:text-8 font-bold text-right">
+            <count-to prefix="$" :start-value="0" :end-value="1234" />
+          </h3>
+        </div>
+      </n-grid-item>
+    </n-grid>
 
-    <div m-4>
-      <n-grid cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
-        <n-grid-item>
-          <div class="chart-bg b-rd w-full">
-            <div ref="lineRef" class="w-full h-300px" />
-          </div>
-        </n-grid-item>
-        <n-grid-item>
-          <div class="chart-bg b-rd">
-            <div ref="pieRef" class="w-full h-300px" />
-          </div>
-        </n-grid-item>
-      </n-grid>
-    </div>
+    <n-grid m-y-4 cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
+      <n-grid-item>
+        <div class="chart-bg b-rd w-full">
+          <div ref="lineRef" class="w-full h-300px" />
+        </div>
+      </n-grid-item>
+      <n-grid-item>
+        <div class="chart-bg b-rd">
+          <div ref="pieRef" class="w-full h-300px" />
+        </div>
+      </n-grid-item>
+    </n-grid>
   </div>
 </template>
