@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-30 14:53:24
- * @LastEditTime: 2022-11-30 16:14:22
+ * @LastEditTime: 2022-11-30 16:32:54
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -12,7 +12,7 @@ const onClickTab = ({ title }) => showToast(title)
 </script>
 
 <template>
-  <van-tabs v-model:active="active" shrink h-24px @click-tab="onClickTab">
+  <van-tabs v-model:active="active" shrink @click-tab="onClickTab">
     <van-tab v-for="index in 8" :key="index" :title="`选项 ${index}`" />
   </van-tabs>
 </template>
