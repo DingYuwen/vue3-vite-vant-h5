@@ -8,9 +8,10 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Chart: typeof import('./components/chart/index.vue')['default']
-    copy: typeof import('./components/common/OrganizationCascader.vue')['default']
+    copy: typeof import('././components/common/Popup/index.vuenCascader.vue')['default']
     CountTo: typeof import('./components/common/CountTo.vue')['default']
     DarkModeSwitch: typeof import('./components/common/DarkModeSwitch.vue')['default']
+    IconMdiBellOutline: typeof import('~icons/mdi/bell-outline')['default']
     IconMdiFilterVariant: typeof import('~icons/mdi/filter-variant')['default']
     IconMdiMoonWaningCrescent: typeof import('~icons/mdi/moon-waning-crescent')['default']
     IconMdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
@@ -23,6 +24,8 @@ declare module '@vue/runtime-core' {
     OrganizationCascader: typeof import('./components/common/OrganizationCascader.vue')['default']
     OrganizationFilter: typeof import('./components/common/OrganizationFilter.vue')['default']
     OrganizationSelect: typeof import('./components/common/OrganizationCascader.vue')['default']
+    Overlay: typeof import('./components/common/Overlay.vue')['default']
+    Popup: typeof import('./components/common/Popup.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Tab: typeof import('./components/common/Tab.vue')['default']
@@ -32,6 +35,7 @@ declare module '@vue/runtime-core' {
     VanCellGroup: typeof import('vant/es')['CellGroup']
     VanCol: typeof import('vant/es')['Col']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
+    VanIcon: typeof import('vant/es')['Icon']
     VanPopup: typeof import('vant/es')['Popup']
     VanRow: typeof import('vant/es')['Row']
     VanTab: typeof import('vant/es')['Tab']

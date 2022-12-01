@@ -1,7 +1,7 @@
 /*
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-11-30 10:05:12
+ * @LastEditTime: 2022-12-01 22:02:57
  * @LastEditors: dingyuwen
  * @Description:
  */
@@ -196,7 +196,13 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     },
 
     plugins: getEnvPlugins(command, env),
-
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "./src/assets/styles/scss/variables.scss" as *;',
+        },
+      },
+    },
     build: {
       cssCodeSplit: false,
       chunkSizeWarningLimit: 2048,

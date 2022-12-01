@@ -1,7 +1,7 @@
 /*
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-11-30 16:16:45
+ * @LastEditTime: 2022-12-01 22:03:44
  * @LastEditors: dingyuwen
  * @Description:
  */
@@ -11,8 +11,8 @@ import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import App from './App.vue'
 import router from './router'
 import 'uno.css'
-import '~/css/index.less'
-import '~/css/global.css'
+import '~/styles/scss/index.scss'
+import '~/styles/css/global.css'
 
 // Vant 桌面端适配
 import '@vant/touch-emulator'

@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-11-30 16:31:54
+ * @LastEditTime: 2022-12-01 23:45:22
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -9,6 +9,19 @@
 import { darkTheme } from 'naive-ui'
 import { Footer, Header } from './layout'
 import { isDark } from '@/composables'
+
+const showPopup = ref(false)
+const barRef = ref<HTMLElement>()
+watch(showPopup, (v) => {
+  console.log(v)
+})
+// const offset = computed(() => {
+//   if (barRef.value) {
+//     const rect = useElementBounding(barRef)
+//     return rect.bottom.value
+//   }
+//   return 0
+// })
 </script>
 
 <template>
@@ -22,6 +35,12 @@ import { isDark } from '@/composables'
         <p c="[var(--van-text-color)]">
           Template for Vue3 Vant Mobile
         </p>
+        <van-cell ref="barRef" title="顶部弹出" is-link @click="showPopup = true" />
+        <Popup
+          v-model:visible="showPopup"
+          position="top"
+          :style="{ height: '30%', top: `153px` }"
+        />
         <router-view />
       </main>
 
