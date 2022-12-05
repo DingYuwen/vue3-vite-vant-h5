@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-12-01 21:19:13
- * @LastEditTime: 2022-12-01 23:31:30
+ * @LastEditTime: 2022-12-05 11:08:47
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -97,13 +97,13 @@ const classes = computed(() => {
     popup: true,
     round: props.round,
     [`popup-${props.position}`]: true,
-    [`popup-${props.position}--safebottom`]: props.position === 'bottom' && props.safeAreaInsetBottom,
     [props.popClass]: true,
   }
 })
 
 const popStyle: ComputedRef = computed(() => {
   return {
+    height: '30%',
     zIndex: state.zIndex,
     transitionDuration: `${props.duration}s`,
     ...props.style,
@@ -197,7 +197,7 @@ watchEffect(() => {
           :class="`popup__close-icon--${closeIconPosition}`"
           @click="onClickCloseIcon"
         >
-          <icon-mdi-bell-outline />
+          <icon-mdi-close />
         </div>
       </div>
     </Transition>

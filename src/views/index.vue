@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-11-30 14:49:16
+ * @LastEditTime: 2022-12-05 17:38:14
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -104,6 +104,7 @@ const lineOptions = ref<ECOption>({
 }) as Ref<ECOption>
 
 const { domRef: lineRef } = useEcharts(lineOptions)
+const { domRef: lineRef2 } = useEcharts(lineOptions)
 
 const pieOptions = ref<ECOption>({
   tooltip: {
@@ -151,15 +152,16 @@ const pieOptions = ref<ECOption>({
   ],
 }) as Ref<ECOption>
 const { domRef: pieRef } = useEcharts(pieOptions)
+const { domRef: pieRef2 } = useEcharts(pieOptions)
 </script>
 
 <template>
-  <div m-t-4>
+  <div mt-4>
     <!-- <van-cell-group title="Template for Vue3 Vant Mobile" inset>
       <van-cell title="📊 charts 演示" to="charts" is-link />
     </van-cell-group> -->
 
-    <n-grid m-y-4 cols="2 l:4" :x-gap="12" :y-gap="12" responsive="screen">
+    <n-grid my-4 cols="2 l:4" :x-gap="12" :y-gap="12" responsive="screen">
       <n-grid-item>
         <div chart-bg b-rd p-2>
           <p class="text-[#aaa]">
@@ -202,7 +204,7 @@ const { domRef: pieRef } = useEcharts(pieOptions)
       </n-grid-item>
     </n-grid>
 
-    <n-grid m-y-4 cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
+    <n-grid my-4 cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
       <n-grid-item>
         <div class="chart-bg b-rd w-full">
           <div ref="lineRef" class="w-full h-300px" />
@@ -211,6 +213,18 @@ const { domRef: pieRef } = useEcharts(pieOptions)
       <n-grid-item>
         <div class="chart-bg b-rd">
           <div ref="pieRef" class="w-full h-300px" />
+        </div>
+      </n-grid-item>
+    </n-grid>
+    <n-grid my-4 cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
+      <n-grid-item>
+        <div class="chart-bg b-rd w-full">
+          <div ref="lineRef2" class="w-full h-300px" />
+        </div>
+      </n-grid-item>
+      <n-grid-item>
+        <div class="chart-bg b-rd">
+          <div ref="pieRef2" class="w-full h-300px" />
         </div>
       </n-grid-item>
     </n-grid>

@@ -1,7 +1,7 @@
 /*
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-12-01 22:02:57
+ * @LastEditTime: 2022-12-05 10:47:13
  * @LastEditors: dingyuwen
  * @Description:
  */
@@ -116,6 +116,7 @@ const getEnvPlugins = (command, env): (PluginOption | PluginOption[])[] => {
         'flex-col-center': 'flex-center flex-col',
         'flex-x-center': 'flex justify-center',
         'flex-y-center': 'flex items-center',
+        'f-c-c': 'flex justify-center flex items-center',
         'i-flex-center': 'inline-flex justify-center items-center',
         'i-flex-x-center': 'inline-flex justify-center',
         'i-flex-y-center': 'inline-flex items-center',
