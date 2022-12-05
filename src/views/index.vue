@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-12-05 17:38:14
+ * @LastEditTime: 2022-12-05 18:55:32
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -163,7 +163,7 @@ const { domRef: pieRef2 } = useEcharts(pieOptions)
 
     <n-grid my-4 cols="2 l:4" :x-gap="12" :y-gap="12" responsive="screen">
       <n-grid-item>
-        <div chart-bg b-rd p-2>
+        <div chart-bg b-rd-4 p-2>
           <p class="text-[#aaa]">
             Overview
           </p>
@@ -173,7 +173,7 @@ const { domRef: pieRef2 } = useEcharts(pieOptions)
         </div>
       </n-grid-item>
       <n-grid-item>
-        <div chart-bg b-rd p-2>
+        <div chart-bg b-rd-4 p-2>
           <p class="text-[#aaa]">
             Overview
           </p>
@@ -183,7 +183,7 @@ const { domRef: pieRef2 } = useEcharts(pieOptions)
         </div>
       </n-grid-item>
       <n-grid-item>
-        <div chart-bg b-rd p-2>
+        <div chart-bg b-rd-4 p-2>
           <p class="text-[#aaa]">
             Earnings
           </p>
@@ -193,7 +193,7 @@ const { domRef: pieRef2 } = useEcharts(pieOptions)
         </div>
       </n-grid-item>
       <n-grid-item>
-        <div chart-bg b-rd p-2>
+        <div chart-bg b-rd-4 p-2>
           <p class="text-[#aaa]">
             Earnings
           </p>
@@ -206,24 +206,24 @@ const { domRef: pieRef2 } = useEcharts(pieOptions)
 
     <n-grid my-4 cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
       <n-grid-item>
-        <div class="chart-bg b-rd w-full">
+        <div class="chart-bg b-rd-4 w-full">
           <div ref="lineRef" class="w-full h-300px" />
         </div>
       </n-grid-item>
       <n-grid-item>
-        <div class="chart-bg b-rd">
+        <div class="chart-bg b-rd-4">
           <div ref="pieRef" class="w-full h-300px" />
         </div>
       </n-grid-item>
     </n-grid>
     <n-grid my-4 cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
       <n-grid-item>
-        <div class="chart-bg b-rd w-full">
+        <div class="chart-bg b-rd-4 w-full">
           <div ref="lineRef2" class="w-full h-300px" />
         </div>
       </n-grid-item>
       <n-grid-item>
-        <div class="chart-bg b-rd">
+        <div class="chart-bg b-rd-4">
           <div ref="pieRef2" class="w-full h-300px" />
         </div>
       </n-grid-item>
