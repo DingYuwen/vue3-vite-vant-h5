@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-29 16:45:20
- * @LastEditTime: 2022-12-05 18:12:14
+ * @LastEditTime: 2022-12-05 18:44:49
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -83,6 +83,10 @@ const navbarMainClasses = computed(() => {
 .shadow-blur {
   backdrop-filter: saturate(200%) blur(30px);
   background-color: rgba(255, 255, 255, 0.6) !important;
-  box-shadow: inset 0 0px 1px 1px rgb(254 254 254 / 70%), 0 20px 27px 0 rgb(0 0 0 / 5%) !important;
+  box-shadow: inset 0 0px 10px 1px rgb(254 254 254 / 70%), 0 20px 27px 0 rgb(0 0 0 / 5%) !important;
+}
+.dark .shadow-blur{
+  background-color: rgba(55, 55, 55, 0.6) !important;
+  box-shadow: inset 0 0px 10px 1px rgb(55 55 55 / 70%), 0 20px 27px 0 rgb(0 0 0 / 5%) !important;
 }
 </style>
