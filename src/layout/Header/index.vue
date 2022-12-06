@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-29 16:45:20
- * @LastEditTime: 2022-12-05 18:44:49
+ * @LastEditTime: 2022-12-06 10:32:46
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -50,7 +50,7 @@ const navbarMainClasses = computed(() => {
     :class="navbarMainClasses"
   >
     <div w-full py-1 px-3>
-      <div>
+      <div c="[var(--van-text-color)]">
         <span>Dashboard / index</span>
         <h5 font-bold>
           Template for Vue3 Vant Mobile

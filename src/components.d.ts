@@ -7,10 +7,13 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    404: typeof import('./components/common/NotFound.vue')['default']
+    Alert: typeof import('./components/common/alert.vue')['default']
     Chart: typeof import('./components/chart/index.vue')['default']
     copy: typeof import('././components/common/Popup/index.vuenCascader.vue')['default']
     CountTo: typeof import('./components/common/CountTo.vue')['default']
     DarkModeSwitch: typeof import('./components/common/DarkModeSwitch.vue')['default']
+    Hr: typeof import('./components/common/Hr-horizontal.vue')['default']
     IconMdiBellOutline: typeof import('~icons/mdi/bell-outline')['default']
     IconMdiBrightness2: typeof import('~icons/mdi/brightness2')['default']
     IconMdiBrightness4: typeof import('~icons/mdi/brightness4')['default']
@@ -31,6 +34,7 @@ declare module '@vue/runtime-core' {
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NGrid: typeof import('naive-ui')['NGrid']
     NGridItem: typeof import('naive-ui')['NGridItem']
+    NotFound: typeof import('./components/common/NotFound.vue')['default']
     NTreeSelect: typeof import('naive-ui')['NTreeSelect']
     OrganizationCascader: typeof import('./components/common/OrganizationCascader.vue')['default']
     OrganizationFilter: typeof import('./components/common/OrganizationFilter.vue')['default']

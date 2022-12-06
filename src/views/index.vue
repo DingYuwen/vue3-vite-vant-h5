@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-12-05 18:55:32
+ * @LastEditTime: 2022-12-06 17:46:08
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -160,6 +160,7 @@ const { domRef: pieRef2 } = useEcharts(pieOptions)
     <!-- <van-cell-group title="Template for Vue3 Vant Mobile" inset>
       <van-cell title="📊 charts 演示" to="charts" is-link />
     </van-cell-group> -->
+    <hr-horizontal />
 
     <n-grid my-4 cols="2 l:4" :x-gap="12" :y-gap="12" responsive="screen">
       <n-grid-item>
@@ -203,6 +204,10 @@ const { domRef: pieRef2 } = useEcharts(pieOptions)
         </div>
       </n-grid-item>
     </n-grid>
+
+    <div my-4 p-2 b-rd-4 chart-bg f-c-c>
+      <not-found text="404" />
+    </div>
 
     <n-grid my-4 cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
       <n-grid-item>
