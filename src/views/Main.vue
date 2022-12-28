@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-12-06 17:46:08
+ * @LastEditTime: 2022-12-28 21:32:12
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -204,10 +204,6 @@ const { domRef: pieRef2 } = useEcharts(pieOptions)
         </div>
       </n-grid-item>
     </n-grid>
-
-    <div my-4 p-2 b-rd-4 chart-bg f-c-c>
-      <not-found text="404" />
-    </div>
 
     <n-grid my-4 cols="1 l:2" :x-gap="12" :y-gap="12" responsive="screen">
       <n-grid-item>

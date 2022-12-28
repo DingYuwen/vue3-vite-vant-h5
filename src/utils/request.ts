@@ -1,7 +1,14 @@
+/*
+ * @Author: dingyuwen ding_yuwen@163.com
+ * @Date: 2022-11-29 19:03:53
+ * @LastEditTime: 2022-12-28 20:52:07
+ * @LastEditors: dingyuwen
+ * @Description:
+ */
 import type { AxiosError, AxiosRequestConfig } from 'axios'
 import axios, { AxiosResponse } from 'axios'
 import { showNotify } from 'vant'
-import { localStorage } from '@/utils/local-storage'
+import { lStorage } from '@/utils'
 import { STORAGE_TOKEN_KEY } from '@/store/mutation-type'
 
 // 这里是用于设定请求后端时，所用的 Token KEY
@@ -49,7 +56,7 @@ const errorHandler = (error: RequestError): Promise<any> => {
 
 // 请求拦截器
 const requestHandler = (config: AxiosRequestConfig): AxiosRequestConfig | Promise<AxiosRequestConfig> => {
-  const savedToken = localStorage.get(STORAGE_TOKEN_KEY)
+  const savedToken = lStorage.get(STORAGE_TOKEN_KEY)
   // 如果 token 存在
   // 让每个请求携带自定义 token, 请根据实际情况修改
   if (savedToken)

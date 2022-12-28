@@ -1,15 +1,14 @@
 /*
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-11-28 15:12:42
- * @LastEditTime: 2022-12-01 22:03:44
+ * @LastEditTime: 2022-12-28 21:44:23
  * @LastEditors: dingyuwen
  * @Description:
  */
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import App from './App.vue'
-import router from './router'
+import { setupRouter } from './router'
+import { setupStore } from '@/store'
 import 'uno.css'
 import '~/styles/scss/index.scss'
 import '~/styles/css/global.css'
@@ -28,12 +27,11 @@ import 'vant/es/dialog/style'
 import 'vant/es/notify/style'
 import 'vant/es/image-preview/style'
 
-const app = createApp(App)
-const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate)
+async function setupApp() {
+  const app = createApp(App)
+  setupStore(app)
+  await setupRouter(app)
+  app.mount('#app')
+}
 
-app
-  .use(router)
-  .use(pinia)
-
-app.mount('#app')
+setupApp()

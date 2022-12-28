@@ -1,45 +1,23 @@
+/*
+ * @Author: dingyuwen ding_yuwen@163.com
+ * @Date: 2022-11-29 19:03:53
+ * @LastEditTime: 2022-12-28 21:45:44
+ * @LastEditors: dingyuwen
+ * @Description:
+ */
 // https://router.vuejs.org/zh/
 import { createRouter, createWebHistory } from 'vue-router'
-import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
+import { setupRouterGuard } from './guard'
+import { routes } from './routes'
 
-// 导入路由组件
-import main from '@/views/index.vue'
-import charts from '@/views/charts/index.vue'
-NProgress.configure({ showSpinner: true })
-
-// 定义路由，每个路由都需要映射到一个组件
-const routes = [
-  {
-    path: '/',
-    name: 'main',
-    component: main,
-  },
-  {
-    path: '/charts',
-    name: 'charts',
-    component: charts,
-  },
-]
-
-// 创建路由实例并传递 `routes` 配置
-const router = createRouter({
+export const router = createRouter({
   history: createWebHistory(process.env.VUE_APP_PUBLIC_PATH),
   routes,
-  scrollBehavior() {
-    // 始终滚动到顶部
-    return { top: 0 }
-  },
+  scrollBehavior: () => ({ left: 0, top: 0 }),
 })
 
-router.beforeEach((_to, _from, next) => {
-  NProgress.start() // start progress bar
-  next()
-})
-
-router.afterEach(() => {
-  NProgress.done() // finish progress bar
-})
-
-// 导出路由实例，并在 `main.ts` 挂载
-export default router
+export async function setupRouter(app) {
+  // await addDynamicRoutes()
+  setupRouterGuard(router)
+  app.use(router)
+}
