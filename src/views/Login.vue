@@ -1,7 +1,7 @@
 <!--
  * @Author: dingyuwen ding_yuwen@163.com
  * @Date: 2022-12-28 21:08:15
- * @LastEditTime: 2022-12-28 22:16:11
+ * @LastEditTime: 2022-12-29 13:46:26
  * @LastEditors: dingyuwen
  * @Description:
 -->
@@ -41,9 +41,11 @@ async function handleLogin() {
 </script>
 
 <template>
-  <div wh-full flex-1 f-c-c>
-    <van-button @click="handleLogin">
-      login
-    </van-button>
+  <div wh-full flex-1 f-c-c flex-col>
+    <div>
+      <van-button @click="handleLogin">
+        login
+      </van-button>
+    </div>
   </div>
 </template>
